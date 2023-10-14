@@ -148,7 +148,8 @@ public class ATm {
 			}
 			else {
 				balance.set(balanceIndex, newBalance);
-				System.out.println("Successfully completed");
+				balcard.put(cardNumber, newBalance);
+				System.out.println("With drawn an amount of "+withdraw);
 			}
 		}
 	}
@@ -161,7 +162,8 @@ public class ATm {
 			int presentBalance=balance.get(balanceIndex);
 			int newBalance=presentBalance+depositMoney;
 			balance.set(balanceIndex, newBalance);
-			System.out.println("Successfully completed");
+			balcard.put(cardNumber, newBalance);
+			System.out.println("Deposition of "+depositMoney+" successfully completed");
 			}
 		else {
 			System.out.println("Entered wrong pin");
